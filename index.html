@@ -9,32 +9,67 @@
 </head>
 <body>
     <!--div for container to hold quiz section-->
+    <div class="container">
+
     <!--div for startup message-->
         <!--Opening page text-->
         <!--buttons to start quiz and to see scores-->
+        <div id="startpage">
+            <h2>The Coding Quiz</h2>
+            <button id="startbtn">Start</button>
+            <button id="scorebtn" onclick="showHighscore()">High Scores</button>
+        </div>
 
     <!--div quiz-->
         <!--Timer-->
         <!--Questions-->
             <!--4 buttons -->
         <!--Results-->
+        <div id="quiz">
+            <div id="timer">Time Left:</div>
+            <div id="questions"><p>Questions go here</p></div>
+                <button id="a" onclick="checkAnswer('a')">A</button>
+                <button id="b" onclick="checkAnswer('b')">B</button>
+                <button id="c" onclick="checkAnswer('c')">C</button>
+                <button id="d" onclick="checkAnswer('d')">D</button>
+            <div id="results"></div>
+        </div>
 
     <!--div gameover message with score-->
         <!--Score-->
         <!--input intials for score keeping-->
         <!--Submit button-->
+        <div id="gameover">
+            <div id="finalScore"></div>
+            <input id="intials" type="text" placeholder="Enter your Intials" name="intials"/>
+            <button id="submitbtn">Submit Score</button>
+        </div>
 
     <!--div for container to hold score page-->
-    <!--ScorePage-->
-        <!--Header-->
-            <!--Text for Intial and Score-->
-        <!--div score intial-->
-        <!--div score-->
-    
-    <!--Endgame-->
-        <!--Button to play again-->
-        <!--Clear Score-->
+        <!--ScorePage-->
+            <!--Header-->
+                <!--Text for Intial and Score-->
+            <!--div score intial-->
+            <!--div score-->
+        <!--Endgame-->
+            <!--Button to play again-->
+            <!--Clear Score-->
+        <div id="HighscoreContainer">
+            <div id="high-scorePage">
+                <div id="highscore-header">
+                    <h3>User Intials</h3>
+                    <h3>Score</h3>
+                </div>
+            <div id="highscore-intial"></div>
+            <div id="highscore-score"></div>
+            </div>
+            <div id="EndGamebtns">
+                <button id="playAgain" onclick="replayQuiz()">Play Again!</button>
+                <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+            </div>
+        </div>
 
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
